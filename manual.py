@@ -2,6 +2,7 @@ from diagrams import Diagram, Cluster
 from diagrams.programming.language import Python
 from diagrams.onprem.compute import Server
 from diagrams.onprem.database import MongoDB
+from diagrams.onprem.monitoring import Prometheus
 from diagrams.onprem.client import User
 from diagrams.generic.os import Windows
 from diagrams.generic.device import Mobile
@@ -9,6 +10,7 @@ from diagrams.generic.device import Mobile
 with Diagram("SoloRL - Solidity RL Architecture", show=False, filename="solidity_rl_architecture", outformat="png"):
 
     user = User("Developer")
+    dashboard = Prometheus("Benchmarking & Reporting")
 
     with Cluster("Solidity RL Optimization System"):
 
